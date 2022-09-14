@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Image Recognition</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+	</head>
+
+	<body>
+		<center>
+			<br><h1>Hand Reconizer</h1><br>
+			<p style="font-size: 25px;">The model is trained to identify which way your head is tilted.<div style="font-size: 20px;">Keep your forehead in the center for the best results.</div></p>
+
+			<label>Webcam View - </label>
+			<div id = 'camera'></div>
+			<br><br>
+			<div id = 'result'></div>
+			<br><br>
+			<button onclick = 'snapCam()' class = 'btn btn-info'>Take Picture</button>
+			<br><br>
+			<button onclick = 'labelImg()' class = 'btn btn-success'>Label Picture</button>
+			<br></br>
+
+			<p style="font-size: 22px;">Object: <span id = 'objectName'></span></p>
+			<p style="font-size: 22px;">Accuracy: <span id = 'objectAccr'></span></p>
+			<script src="main.js"></script>
+		</center>
+	</body>
+</html>
